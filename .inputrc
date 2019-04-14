@@ -1,0 +1,4 @@
+set completion-ignore-case on
+
+# show tab suggestions right away instead of ringing the bell
+set show-all-if-ambiguous on
