@@ -32,6 +32,10 @@ For macOS only, as that’s what I (currently, only, still) use.
 # Inspiration
 
 * https://github.com/mathiasbynens/dotfiles
+* https://github.com/jasonbarone/dotfiles
+* https://github.com/eddiewebb/dotfiles
+* https://github.com/lra/mackup
+* https://code.tutsplus.com/tutorials/setting-up-a-mac-dev-machine-from-zero-to-hero-with-dotfiles--net-35449
 * http://blog.taylormcgann.com/2012/06/13/customize-your-shell-command-prompt/
 
 - - -
