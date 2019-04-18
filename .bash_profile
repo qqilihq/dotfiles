@@ -91,9 +91,9 @@ prompt_git() {
 prompt_command() {
   local EXIT="$?"
   # https://misc.flogisoft.com/bash/tip_colors_and_formatting
-  local DIM='\e[2m'
-  local LIGHT_RED='\e[91m'
-  local RESET_ALL='\e[0m'
+  local DIM='\[\e[2m\]'
+  local LIGHT_RED='\[\e[91m\]'
+  local RESET_ALL='\[\e[0m\]'
   # set tab/window title
   PS1='\[\033]0;\w\007\]'
   # Git info (if applicable), and current directory
