@@ -94,10 +94,13 @@ prompt_command() {
   local DIM='\[\e[2m\]'
   local LIGHT_RED='\[\e[91m\]'
   local RESET_ALL='\[\e[0m\]'
+  PS1=''
   # set tab/window title
-  PS1='\[\033]0;\w\007\]'
-  # Git info (if applicable), and current directory
-  PS1+="\$(prompt_git)${DIM}\w \$${RESET_ALL} "
+  PS1+='\[\033]0;\w\007\]'
+  # Git info (if applicable)
+  PS1+="\$(prompt_git)"
+  # current directory and $
+  PS1+="${DIM}\w \$${RESET_ALL} "
   # show exit code in case last command was no successful
   # https://stackoverflow.com/questions/16715103/bash-prompt-with-last-exit-code
   if [ $EXIT != 0 ]; then
