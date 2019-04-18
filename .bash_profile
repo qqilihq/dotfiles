@@ -101,7 +101,7 @@ prompt_command() {
   PS1+="\$(prompt_git)"
   # current directory and $
   PS1+="${DIM}\w \$${RESET_ALL} "
-  # show exit code in case last command was no successful
+  # show exit code in case last command was not successful
   # https://stackoverflow.com/questions/16715103/bash-prompt-with-last-exit-code
   if [ $EXIT != 0 ]; then
     PS1="${LIGHT_RED}${EXIT}${RESET_ALL} ${PS1}"
