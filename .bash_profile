@@ -31,6 +31,10 @@ alias fixopenwith='/System/Library/Frameworks/CoreServices.framework/Frameworks/
 # refresh shell
 alias reload='source ~/.bash_profile'
 
+# Hide/show all desktop icons (useful when presenting)
+alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
+alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
+
 
 # ######
 # prompt
