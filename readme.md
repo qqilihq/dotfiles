@@ -28,6 +28,8 @@ For macOS only, as that’s what I (currently, only, still) use.
 
 * Git completion in Bash
 
+* [Phoenix](https://github.com/kasper/phoenix) window manager configuration (still getting used to it)
+
 
 # Inspiration
 
