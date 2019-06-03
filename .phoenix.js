@@ -1,5 +1,10 @@
 const modifiers = [ 'ctrl', 'shift' ];
 
+Phoenix.set({
+  daemon: true,
+  openAtLogin: true
+});
+
 Key.on('z', modifiers, function () {
   const screen = Screen.main().flippedVisibleFrame();
   const window = Window.focused();
