@@ -35,6 +35,9 @@ alias reload='source ~/.bash_profile'
 alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
 alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
 
+# Create an invoice number (ten random digits, zero-padded)
+alias invoicenumber='printf "%010d" $(jot -r 1 0 10000000000)'
+
 
 # ######
 # prompt
