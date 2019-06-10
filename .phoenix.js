@@ -36,14 +36,6 @@ Key.on('up', modifiers, function () {
   const screen = Screen.main().flippedVisibleFrame();
   const window = Window.focused();
   if (window) {
-    window.setFrame({ ...screen, height: screen.height / 2 });
-  }
-});
-
-Key.on('down', modifiers, function () {
-  const screen = Screen.main().flippedVisibleFrame();
-  const window = Window.focused();
-  if (window) {
-    window.setFrame({ ...screen, y: screen.height / 2, height: screen.height / 2 });
+    window.setFrame(screen);
   }
 });
