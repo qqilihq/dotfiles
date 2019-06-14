@@ -9,49 +9,49 @@ Phoenix.set({
 
 Key.on('left', modifiers, windowHandler((window, screen) => {
   if (window.at(screen.topHalf()) || window.at(screen.topRightQuarter())) {
-    window.setFrame(screen.topLeftQuarter());
+    return screen.topLeftQuarter();
   } else if (window.at(screen.bottomHalf()) || window.at(screen.bottomRightQuarter())) {
-    window.setFrame(screen.bottomLeftQuarter());
+    return screen.bottomLeftQuarter();
   } else if (window.at(screen.leftHalf())) {
-    window.setFrame(screen.full());
+    return screen.full();
   } else {
-    window.setFrame(screen.leftHalf());
+    return screen.leftHalf();
   }
 }));
 
 Key.on('right', modifiers, windowHandler((window, screen) => {
   if (window.at(screen.topHalf()) || window.at(screen.topLeftQuarter())) {
-    window.setFrame(screen.topRightQuarter());
+    return screen.topRightQuarter();
   } else if (window.at(screen.bottomHalf()) || window.at(screen.bottomLeftQuarter())) {
-    window.setFrame(screen.bottomRightQuarter());
+    return screen.bottomRightQuarter();
   } else if (window.at(screen.rightHalf())) {
-    window.setFrame(screen.full());
+    return screen.full();
   } else {
-    window.setFrame(screen.rightHalf());
+    return screen.rightHalf();
   }
 }));
 
 Key.on('up', modifiers, windowHandler((window, screen) => {
   if (window.at(screen.leftHalf()) || window.at(screen.bottomLeftQuarter())) {
-    window.setFrame(screen.topLeftQuarter());
+    return screen.topLeftQuarter();
   } else if (window.at(screen.rightHalf()) || window.at(screen.bottomRightQuarter())) {
-    window.setFrame(screen.topRightQuarter());
+    return screen.topRightQuarter();
   } else if (window.at(screen.full()) || window.at(screen.bottomHalf())) {
-    window.setFrame(screen.topHalf());
+    return screen.topHalf();
   } else {
-    window.setFrame(screen.full());
+    return screen.full();
   }
 }));
 
 Key.on('down', modifiers, windowHandler((window, screen) => {
   if (window.at(screen.leftHalf()) || window.at(screen.topLeftQuarter())) {
-    window.setFrame(screen.bottomLeftQuarter());
+    return screen.bottomLeftQuarter();
   } else if (window.at(screen.rightHalf()) || window.at(screen.topRightQuarter())) {
-    window.setFrame(screen.bottomRightQuarter());
+    return screen.bottomRightQuarter();
   } else if (window.at(screen.full()) || window.at(screen.topHalf()) || window.at(screen.bottomLeftQuarter()) || window.at(screen.bottomRightQuarter())) {
-    window.setFrame(screen.bottomHalf());
+    return screen.bottomHalf();
   } else if (window.at(screen.bottomHalf())) {
-    window.setFrame(screen.full());
+    return screen.full();
   }
 }));
 
@@ -104,7 +104,8 @@ Window.prototype.at = function (rectangle) {
 
 /** Handler utility for window methods. The handler methods only gets
  * called when there’s actually a window. It gets passed the window
- * and the corresponding screen as parameters. */
+ * and the corresponding screen as parameters and should return the
+ * new position (or nothing if no action should be taken). */
 function windowHandler (handler) {
   return () => {
     const window = Window.focused();
@@ -112,6 +113,9 @@ function windowHandler (handler) {
       return;
     }
     const screen = window.screen();
-    handler(window, screen);
+    const position = handler(window, screen);
+    if (position) {
+      window.setFrame(position);
+    }
   }
 }
