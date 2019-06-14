@@ -1,3 +1,5 @@
+// https://github.com/kasper/phoenix/blob/2.6.2/docs/API.md
+
 const modifiers = [ 'ctrl', 'shift' ];
 
 Phoenix.set({
@@ -10,6 +12,8 @@ Key.on('left', modifiers, windowHandler((window, screen) => {
     window.setFrame(screen.topLeftQuarter());
   } else if (window.at(screen.bottomHalf()) || window.at(screen.bottomRightQuarter())) {
     window.setFrame(screen.bottomLeftQuarter());
+  } else if (window.at(screen.leftHalf())) {
+    window.setFrame(screen.full());
   } else {
     window.setFrame(screen.leftHalf());
   }
@@ -20,6 +24,8 @@ Key.on('right', modifiers, windowHandler((window, screen) => {
     window.setFrame(screen.topRightQuarter());
   } else if (window.at(screen.bottomHalf()) || window.at(screen.bottomLeftQuarter())) {
     window.setFrame(screen.bottomRightQuarter());
+  } else if (window.at(screen.rightHalf())) {
+    window.setFrame(screen.full());
   } else {
     window.setFrame(screen.rightHalf());
   }
@@ -30,7 +36,7 @@ Key.on('up', modifiers, windowHandler((window, screen) => {
     window.setFrame(screen.topLeftQuarter());
   } else if (window.at(screen.rightHalf()) || window.at(screen.bottomRightQuarter())) {
     window.setFrame(screen.topRightQuarter());
-  } else if (window.at(screen.full()) || window.at(screen.topLeftQuarter()) || window.at(screen.topRightQuarter()) || window.at(screen.bottomHalf())) {
+  } else if (window.at(screen.full()) || window.at(screen.bottomHalf())) {
     window.setFrame(screen.topHalf());
   } else {
     window.setFrame(screen.full());
@@ -42,8 +48,10 @@ Key.on('down', modifiers, windowHandler((window, screen) => {
     window.setFrame(screen.bottomLeftQuarter());
   } else if (window.at(screen.rightHalf()) || window.at(screen.topRightQuarter())) {
     window.setFrame(screen.bottomRightQuarter());
-  } else if (window.at(screen) || window.at(screen.topHalf()) || window.at(screen.bottomLeftQuarter()) || window.at(screen.bottomRightQuarter())) {
+  } else if (window.at(screen.full()) || window.at(screen.topHalf()) || window.at(screen.bottomLeftQuarter()) || window.at(screen.bottomRightQuarter())) {
     window.setFrame(screen.bottomHalf());
+  } else if (window.at(screen.bottomHalf())) {
+    window.setFrame(screen.full());
   }
 }));
 
