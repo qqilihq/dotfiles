@@ -30,6 +30,14 @@ For macOS only, as that’s what I (currently, only, still) use.
 
 * [Phoenix](https://github.com/kasper/phoenix) window manager configuration (still getting used to it)
 
+# Installation
+
+Run the following script to symlink the files in this repository at the proper locations:
+
+```
+$ ./install.sh
+```
+
 
 # Inspiration
 
