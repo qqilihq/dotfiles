@@ -93,7 +93,7 @@ Screen.prototype.bottomHalf = function () {
  * moved the window a little). */
 Window.prototype.at = function (rectangle) {
   const frame = this.frame();
-  const delta = 5;
+  const delta = 15;
   for (const property of ['x', 'y', 'width', 'height']) {
     if (Math.abs(rectangle[property] - frame[property]) > delta) {
       return false;
