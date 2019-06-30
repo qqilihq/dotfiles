@@ -55,6 +55,22 @@ Key.on('down', modifiers, windowHandler((window, screen) => {
   }
 }));
 
+Key.on('c', modifiers, windowHandler(window => window.center()));
+
+const growMoveDistance = 50;
+
+// move window
+Key.on('w', modifiers, windowHandler(window => window.move('vertical', -growMoveDistance)));
+Key.on('s', modifiers, windowHandler(window => window.move('vertical', growMoveDistance)));
+Key.on('a', modifiers, windowHandler(window => window.move('horizontal', -growMoveDistance)));
+Key.on('d', modifiers, windowHandler(window => window.move('horizontal', growMoveDistance)));
+
+// grow/shrink window
+Key.on('y', modifiers, windowHandler(window => window.grow('width', -growMoveDistance)));
+Key.on('x', modifiers, windowHandler(window => window.grow('width', growMoveDistance)));
+Key.on('f', modifiers, windowHandler(window => window.grow('height', -growMoveDistance)));
+Key.on('v', modifiers, windowHandler(window => window.grow('height', growMoveDistance)));
+
 // helper functions for creating rectangles within the 2x2 grid
 // e.g. `topLeftQuarter` will create a rectangle at x and y position (0,0),
 // with half the screen’s width and height
@@ -100,6 +116,27 @@ Window.prototype.at = function (rectangle) {
     }
   }
   return true;
+}
+
+Window.prototype.center = function () {
+  const screen = this.screen().flippedVisibleFrame();
+  const frame = this.frame();
+  this.setTopLeft({ x: (screen.width - frame.width) / 2, y: (screen.height - frame.height) / 2 });
+}
+
+Window.prototype.move = function (direction, by) {
+  const frame = this.frame();
+  switch (direction) {
+    case 'vertical': frame.y += by; break;
+    case 'horizontal': frame.x += by; break;
+  }
+  this.setFrame(frame);
+}
+
+Window.prototype.grow = function (direction, by) {
+  const frame = this.frame();
+  frame[direction] += by;
+  this.setFrame(frame);
 }
 
 /** Handler utility for window methods. The handler methods only gets
