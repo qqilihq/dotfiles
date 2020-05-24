@@ -223,3 +223,45 @@ function generateRandomString(length, characters) {
   }
   return result.join('');
 }
+
+// WIP: configurable grid
+
+let gridWidth = 1;
+let gridHeight = 2;
+
+Key.on('.', modifiers, function () {
+  gridWidth = Math.min(4, ++gridWidth);
+  showGridModal();
+});
+
+Key.on(',', modifiers, function () {
+  gridWidth = Math.max(1, --gridWidth);
+  showGridModal();
+});
+
+Key.on('+', modifiers, function () {
+  gridHeight = Math.min(4, ++gridHeight);
+  showGridModal();
+});
+
+Key.on('#', modifiers, function () {
+  gridHeight = Math.max(1, --gridHeight);
+  showGridModal();
+});
+
+function showGridModal () {
+  const screen = Window.focused().screen().flippedVisibleFrame();
+  let text = `Grid ${gridWidth} × ${gridHeight}\n`;
+  for (let idx = 0; idx < gridHeight; idx++) {
+    text += '\n' + '◼︎ '.repeat(gridWidth);
+  }
+  Modal.build({
+    duration: 1,
+    animationDuration: 0,
+    text,
+    origin: modal => ({
+      x: screen.x + screen.width / 2 - modal.width / 2,
+      y: screen.y + screen.height / 2 - modal.height / 2
+    })
+  }).show();  
+}
