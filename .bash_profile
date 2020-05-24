@@ -17,6 +17,7 @@ alias ~='cd ~'
 alias -- -="cd -"
 alias dt='cd ~/Desktop'
 alias dc='docker-compose'
+alias dps='docker ps -a'
 
 # -l long format
 # -a include . directories
