@@ -1,5 +1,9 @@
 // https://github.com/kasper/phoenix/blob/2.6.2/docs/API.md
 
+// TODO minimize/hide all windows except current?
+// TODO minimize other application windows
+// TODO move to other space
+
 const modifiers = [ 'ctrl', 'shift' ];
 
 Phoenix.set({
