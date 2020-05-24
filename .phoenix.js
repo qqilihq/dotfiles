@@ -2,7 +2,6 @@
 
 // TODO minimize/hide all windows except current?
 // TODO minimize other application windows
-// TODO move to other space
 
 const modifiers = [ 'ctrl', 'shift' ];
 
@@ -159,4 +158,29 @@ function windowHandler (handler) {
       window.setFrame(position);
     }
   }
+}
+
+// space-related: move current window to previous/or next space
+Key.on('p', modifiers, () => moveSpace(true));
+Key.on('o', modifiers, () => moveSpace(false));
+
+function moveSpace (nextOrPrevious) {
+  const window = Window.focused();
+  if (!window) {
+    return;
+  }
+  const currentSpace = window.screen().currentSpace();
+  if (currentSpace.isFullScreen()) {
+    return; // do not move windows from full screen space
+  }
+  let destinationSpace = currentSpace;
+  for (;;) {
+    destinationSpace = nextOrPrevious ? destinationSpace.next() : destinationSpace.previous()
+    if (!destinationSpace.isFullScreen()) { // do not move to full screen space
+      break;
+    }
+  }
+  currentSpace.removeWindows([window]);
+  destinationSpace.addWindows([window]);
+  window.focus();
 }
