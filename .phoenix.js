@@ -184,3 +184,34 @@ function moveSpace (nextOrPrevious) {
   destinationSpace.addWindows([window]);
   window.focus();
 }
+
+// clipboard-related
+// https://github.com/kasper/phoenix/issues/213#issuecomment-386087210
+
+// generate a random invoice number (ten numeric characters)
+Key.on('i', modifiers, () => addToClipboard(generateRandomString(10, '0123456789')));
+// current date, e.g. “2020-07-26”
+Key.on('d', modifiers, () => addToClipboard(new Date().toISOString().replace(/T.*$/, '')));
+
+function addToClipboard(value) {
+  Task.run('/usr/bin/env', ['bash', '-c', `echo -n "${value}" | pbcopy`], () => {
+    const screen = Window.focused().screen().flippedVisibleFrame();
+    Modal.build({
+      duration: 1,
+      animationDuration: 0,
+      text: `Added to clipboard: ${value}`,
+      origin: modal => ({
+        x: screen.x + screen.width / 2 - modal.width / 2,
+        y: screen.y + screen.height / 2 - modal.height / 2
+      })
+    }).show();
+  });
+}
+
+function generateRandomString(length, characters) {
+  const result = [];
+  for (let i = 0; i < length; i++) {
+    result.push(characters.charAt(Math.floor(Math.random() * characters.length)));
+  }
+  return result.join('');
+}
