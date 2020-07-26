@@ -60,19 +60,19 @@ Key.on('down', modifiers, windowHandler((window, screen) => {
 
 Key.on('c', modifiers, windowHandler(window => window.center()));
 
-const growMoveDistance = 50;
+// const growMoveDistance = 50;
 
 // move window
-Key.on('w', modifiers, windowHandler(window => window.move('vertical', -growMoveDistance)));
-Key.on('s', modifiers, windowHandler(window => window.move('vertical', growMoveDistance)));
-Key.on('a', modifiers, windowHandler(window => window.move('horizontal', -growMoveDistance)));
-Key.on('d', modifiers, windowHandler(window => window.move('horizontal', growMoveDistance)));
+// Key.on('w', modifiers, windowHandler(window => window.move('vertical', -growMoveDistance)));
+// Key.on('s', modifiers, windowHandler(window => window.move('vertical', growMoveDistance)));
+// Key.on('a', modifiers, windowHandler(window => window.move('horizontal', -growMoveDistance)));
+// Key.on('d', modifiers, windowHandler(window => window.move('horizontal', growMoveDistance)));
 
 // grow/shrink window
-Key.on('y', modifiers, windowHandler(window => window.grow('width', -growMoveDistance)));
-Key.on('x', modifiers, windowHandler(window => window.grow('width', growMoveDistance)));
-Key.on('f', modifiers, windowHandler(window => window.grow('height', -growMoveDistance)));
-Key.on('v', modifiers, windowHandler(window => window.grow('height', growMoveDistance)));
+// Key.on('y', modifiers, windowHandler(window => window.grow('width', -growMoveDistance)));
+// Key.on('x', modifiers, windowHandler(window => window.grow('width', growMoveDistance)));
+// Key.on('f', modifiers, windowHandler(window => window.grow('height', -growMoveDistance)));
+// Key.on('v', modifiers, windowHandler(window => window.grow('height', growMoveDistance)));
 
 // helper functions for creating rectangles within the 2x2 grid
 // e.g. `topLeftQuarter` will create a rectangle at x and y position (0,0),
