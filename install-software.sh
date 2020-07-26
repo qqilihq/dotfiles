@@ -28,6 +28,7 @@ brew cask install fork
 brew cask install google-chrome
 brew cask install grandperspective
 brew cask install keka
+brew cask install knime
 brew cask install mactracker
 brew cask install nextcloud
 brew cask install paw
