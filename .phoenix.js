@@ -192,6 +192,23 @@ function moveSpace (nextOrPrevious) {
 Key.on('i', modifiers, () => type(generateRandomString(10, '0123456789')));
 // current date, e.g. “2020-07-26”
 Key.on('d', modifiers, () => type(new Date().toISOString().replace(/T.*$/, '')));
+// make selected text “Title Case”
+// TODO currently doesn’t work properly with special characters, e.g. umlaut, curly quotes, …
+// this is obviosuly an encoding issue, but I’m not sure how to properly set the encoding here?
+Key.on('t', modifiers, () => {
+  Task.run('/usr/bin/env', [
+    'bash', 
+    '-c', 
+    // (1) copy the current text selection
+    '/usr/local/bin/cliclick w:100 kd:cmd t:c ku:cmd; ' + 
+    // (2) run `titlecase` on the clipboard content;
+    // trim the trailing newline character
+    // https://stackoverflow.com/a/12524345/388827
+    'pbpaste | /usr/local/bin/titlecase | perl -pe \'chomp if eof\' | pbcopy; ' +
+    // (3) paste it back
+    '/usr/local/bin/cliclick kd:cmd t:v ku:cmd;'
+  ]);
+});
 
 function type(value) {
   // wait 100ms before inserting the text to ensure that the modifier keys have been released;
