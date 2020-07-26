@@ -4,6 +4,11 @@
 
 export PATH="$HOME/bin:$PATH"
 
+# specific homebrew kegs
+export PATH="/usr/local/opt/node@12/bin:$PATH"
+# yarn
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
 # #######
 # aliases
 # #######
