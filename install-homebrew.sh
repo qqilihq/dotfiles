@@ -6,6 +6,7 @@ brew upgrade
 brew install cliclick
 brew install ctop
 brew install dive
+brew install dnsmasq # https://github.com/christianalfoni/create-ssl-certificate#2-universal-setup
 brew install gifify
 brew install gnupg
 brew install gradle
@@ -21,6 +22,7 @@ brew install wget
 brew cask install 1password
 brew cask install docker
 brew cask install easyfind
+brew cask install eclipse-java
 brew cask install firefox
 brew cask install fork
 brew cask install google-chrome
