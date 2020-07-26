@@ -1,4 +1,4 @@
-// https://github.com/kasper/phoenix/blob/2.6.2/docs/API.md
+// https://github.com/kasper/phoenix/blob/2.6.4/docs/API.md
 
 // TODO minimize/hide all windows except current?
 // TODO minimize other application windows
