@@ -185,27 +185,18 @@ function moveSpace (nextOrPrevious) {
   window.focus();
 }
 
-// clipboard-related
-// https://github.com/kasper/phoenix/issues/213#issuecomment-386087210
+// snippet-related -- insert text via clicklick
+// https://www.bluem.net/en/projects/cliclick/
 
 // generate a random invoice number (ten numeric characters)
-Key.on('i', modifiers, () => addToClipboard(generateRandomString(10, '0123456789')));
+Key.on('i', modifiers, () => type(generateRandomString(10, '0123456789')));
 // current date, e.g. “2020-07-26”
-Key.on('d', modifiers, () => addToClipboard(new Date().toISOString().replace(/T.*$/, '')));
+Key.on('d', modifiers, () => type(new Date().toISOString().replace(/T.*$/, '')));
 
-function addToClipboard(value) {
-  Task.run('/usr/bin/env', ['bash', '-c', `echo -n "${value}" | pbcopy`], () => {
-    const screen = Window.focused().screen().flippedVisibleFrame();
-    Modal.build({
-      duration: 1,
-      animationDuration: 0,
-      text: `Added to clipboard: ${value}`,
-      origin: modal => ({
-        x: screen.x + screen.width / 2 - modal.width / 2,
-        y: screen.y + screen.height / 2 - modal.height / 2
-      })
-    }).show();
-  });
+function type(value) {
+  // wait 100ms before inserting the text to ensure that the modifier keys have been released;
+  // XXX is there a better way? https://github.com/kasper/phoenix/issues/262
+  Task.run('/usr/local/bin/cliclick', ['w:100', `t:${value}`]);
 }
 
 function generateRandomString(length, characters) {
