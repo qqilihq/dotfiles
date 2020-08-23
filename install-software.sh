@@ -34,6 +34,7 @@ brew cask install nextcloud
 brew cask install paw
 brew cask install phoenix
 brew cask install robo-3t
+brew cask install sequel-ace
 brew cask install sublime-text
 brew cask install transmit
 brew cask install visual-studio-code
