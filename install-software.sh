@@ -22,7 +22,7 @@ brew install wget
 brew cask install 1password
 brew cask install docker
 brew cask install easyfind
-brew cask install eclipse-java
+brew cask install eclipse-rcp
 brew cask install firefox
 brew cask install fork
 brew cask install google-chrome
