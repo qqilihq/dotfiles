@@ -40,6 +40,8 @@ alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && k
 # Create an invoice number (ten random digits, zero-padded)
 alias invoicenumber='printf "%010d" $(jot -r 1 0 10000000000)'
 
+# Recursively delete `.DS_Store` files
+alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
 
 # ######
 # prompt
