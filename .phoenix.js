@@ -191,7 +191,14 @@ function moveSpace (nextOrPrevious) {
 // generate a random invoice number (ten numeric characters)
 Key.on('i', modifiers, () => type(generateRandomString(10, '0123456789')));
 // current date, e.g. “2020-07-26”
-Key.on('d', modifiers, () => type(new Date().toISOString().replace(/T.*$/, '')));
+Key.on('d', modifiers, () => {
+  // give the date in current time zone:
+  // https://stackoverflow.com/a/29774197
+  const date = new Date();
+  const offset = date.getTimezoneOffset();
+  const dateString = new Date(date.getTime() - (offset * 60 * 1000)).toISOString().replace(/T.*$/, '');
+  type(dateString)
+});
 // make selected text “Title Case”
 // TODO currently doesn’t work properly with special characters, e.g. umlaut, curly quotes, …
 // this is obviosuly an encoding issue, but I’m not sure how to properly set the encoding here?
