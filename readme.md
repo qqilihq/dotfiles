@@ -31,6 +31,10 @@ For macOS only, as that’s what I (currently, only, still) use.
 
 - [Phoenix](https://github.com/kasper/phoenix) window manager configuration (still getting used to it)
 
+- symlink `~/.ssh/config` to iCloud Drive -> `./sync/.ssh_config`
+
+- auto-completion for SSH based on SSH config
+
 # Installation
 
 Run the following script to symlink the files in this repository at the proper locations:

@@ -23,10 +23,13 @@ symlink_if_not_exists() {
     echo "$1 not found."
     exit 1
   fi
-  ln -s "$PWD/$1" "$2"
-  echo "$PWD/$1 -> $2"
+  ln -s "$1" "$2"
+  echo "$1 -> $2"
 }
 
-symlink_if_not_exists ".bash_profile" "${HOME}/.bash_profile"
-symlink_if_not_exists ".phoenix.js" "${HOME}/.phoenix.js"
-symlink_if_not_exists ".inputrc" "${HOME}/.inputrc"
+symlink_if_not_exists "${PWD}/.bash_profile" "${HOME}/.bash_profile"
+symlink_if_not_exists "${PWD}/.phoenix.js" "${HOME}/.phoenix.js"
+symlink_if_not_exists "${PWD}/.inputrc" "${HOME}/.inputrc"
+
+# put ssh config in iCloud Drive -> `./sync/.ssh_config`
+symlink_if_not_exists "${HOME}/Library/Mobile Documents/com~apple~CloudDocs/.sync/ssh_config" "${HOME}/.ssh/config"
