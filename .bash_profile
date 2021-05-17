@@ -152,6 +152,9 @@ fi
 # https://github.com/mathiasbynens/dotfiles/blob/5368015b53467949c36f1e386582ac066b0d0ae6/.bash_profile#L42
 [ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2- | tr ' ' '\n')" scp sftp ssh;
 
+# https://apple.stackexchange.com/a/371998
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
 # ################################################
 # end -- lines below have been added automatically
 # ################################################
