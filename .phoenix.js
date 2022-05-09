@@ -178,8 +178,8 @@ Window.prototype.center = function () {
   const screen = this.screen().flippedVisibleFrame();
   const frame = this.frame();
   this.setTopLeft({
-    x: (screen.width - frame.width) / 2,
-    y: (screen.height - frame.height) / 2,
+    x: screen.x + (screen.width - frame.width) / 2,
+    y: screen.y + (screen.height - frame.height) / 2,
   });
 };
 
