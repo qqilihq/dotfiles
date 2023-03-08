@@ -180,6 +180,15 @@ defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
 # Stop iTunes from responding to the keyboard media keys
 #launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
 
+# Remap Caps Lock to Esc
+# https://developer.apple.com/library/archive/technotes/tn2450/_index.html
+# https://rakhesh.com/mac/using-hidutil-to-map-macos-keyboard-keys/
+# https://gist.github.com/buckleyc/ce6f2325d1ff2f6e5ed8742f97491e80
+# hidutil property --set '{"UserKeyMapping":[{"HIDKeyboardModifierMappingSrc":0x700000039,"HIDKeyboardModifierMappingDst":0x700000029}]}'
+mkdir -p "${HOME}/Library/LaunchAgents"
+cp ./LaunchAgents/de.philippkatz.HidutilKeyMapping.plist "${HOME}/Library/LaunchAgents"
+launchctl load "${HOME}/Library/LaunchAgents/de.philippkatz.HidutilKeyMapping.plist"
+
 ###############################################################################
 # Energy saving                                                               #
 ###############################################################################
