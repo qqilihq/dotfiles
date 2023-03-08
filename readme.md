@@ -37,9 +37,10 @@ For macOS only, as that’s what I (currently, only, still) use.
 
 # Installation
 
-Run the following script to symlink the files in this repository at the proper locations:
+Install [Homebrew](https://brew.sh). Then, run the `install-software.sh` script to install most of the software I use (except e.g. Affinity, …). Then, run `install.sh` to copy the dotfiles in place.
 
 ```
+$ ./install-software.sh
 $ ./install.sh
 ```
 
