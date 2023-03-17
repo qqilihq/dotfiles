@@ -5,6 +5,7 @@ brew upgrade
 
 brew install maven
 brew install tldr
+brew install volta
 
 brew tap adoptopenjdk/openjdk
 brew install adoptopenjdk/openjdk/adoptopenjdk14
