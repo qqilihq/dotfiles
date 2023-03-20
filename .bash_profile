@@ -158,3 +158,6 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 # ################################################
 # end -- lines below have been added automatically
 # ################################################
+
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
