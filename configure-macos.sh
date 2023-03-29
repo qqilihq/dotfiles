@@ -371,6 +371,9 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict \
 	OpenWith -bool true \
 	Privileges -bool true
 
+# Don’t ask when (re)moving files from iCloud
+defaults write com.apple.finder FXEnableRemoveFromICloudDriveWarning -bool false
+
 ###############################################################################
 # Dock, Dashboard, and hot corners                                            #
 ###############################################################################
