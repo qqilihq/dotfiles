@@ -187,6 +187,7 @@ defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
 # hidutil property --set '{"UserKeyMapping":[{"HIDKeyboardModifierMappingSrc":0x700000039,"HIDKeyboardModifierMappingDst":0x700000029}]}'
 mkdir -p "${HOME}/Library/LaunchAgents"
 cp ./LaunchAgents/de.philippkatz.HidutilKeyMapping.plist "${HOME}/Library/LaunchAgents"
+# “Load failed: 5: Input/output error” seems to mean that it’s already loaded
 launchctl load "${HOME}/Library/LaunchAgents/de.philippkatz.HidutilKeyMapping.plist"
 
 ###############################################################################
