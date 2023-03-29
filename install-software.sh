@@ -3,6 +3,7 @@
 brew update
 brew upgrade
 
+brew install dnsmasq
 brew install maven
 brew install tldr
 brew install volta
