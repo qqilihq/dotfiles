@@ -19,6 +19,7 @@ brew install --cask fork
 brew install --cask google-chrome
 brew install --cask grandperspective
 brew install --cask keka
+brew install --cask knime
 brew install --cask mactracker
 brew install --cask phoenix
 brew install --cask rapidapi
