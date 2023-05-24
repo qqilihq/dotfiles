@@ -5,6 +5,7 @@ brew upgrade
 
 brew install cliclick
 brew install dnsmasq
+brew install jq
 brew install maven
 brew install tldr
 brew install volta
