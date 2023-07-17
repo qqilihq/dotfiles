@@ -42,6 +42,7 @@ Install [Homebrew](https://brew.sh). Then, run the `install-software.sh` script 
 ```
 $ ./install-software.sh
 $ ./install.sh
+$ ./configure-macos.sh
 ```
 
 # Inspiration
