@@ -26,6 +26,7 @@ brew install --cask knime
 brew install --cask mactracker
 brew install --cask phoenix
 brew install --cask rapidapi
+brew install --cask sequel-ace
 brew install --cask steam
 brew install --cask studio-3t
 brew install --cask transmit
