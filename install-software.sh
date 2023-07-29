@@ -18,6 +18,7 @@ brew install adoptopenjdk/openjdk/adoptopenjdk14
 brew install --cask docker
 brew install --cask easyfind
 brew install --cask eclipse-rcp
+brew install --cask firefox
 brew install --cask fork
 brew install --cask google-chrome
 brew install --cask grandperspective
