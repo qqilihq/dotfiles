@@ -5,6 +5,7 @@
 brew update
 brew upgrade
 
+brew install ansible
 brew install cliclick
 brew install dnsmasq
 brew install jq
