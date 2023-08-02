@@ -249,40 +249,52 @@ function moveSpace(nextOrPrevious) {
 // snippet-related -- insert text via clicklick
 // https://www.bluem.net/en/projects/cliclick/
 
-// generate a random invoice number (ten numeric characters)
-Key.on('i', modifiers, () => type(generateRandomString(10, '0123456789')));
-// current date, e.g. “2020-07-26”
-Key.on('d', modifiers, () => {
-  // give the date in current time zone:
-  // https://stackoverflow.com/a/29774197
-  const date = new Date();
-  const offset = date.getTimezoneOffset();
-  const dateString = new Date(date.getTime() - offset * 60 * 1000).toISOString().replace(/T.*$/, '');
-  type(dateString);
-});
-// make selected text “Title Case”
-// TODO currently doesn’t work properly with special characters, e.g. umlaut, curly quotes, …
-// this is obviosuly an encoding issue, but I’m not sure how to properly set the encoding here?
-Key.on('t', modifiers, () => {
-  Task.run('/usr/bin/env', [
-    'bash',
-    '-c',
-    // (1) copy the current text selection
-    '/usr/local/bin/cliclick w:100 kd:cmd t:c ku:cmd; ' +
-      // (2) run `titlecase` on the clipboard content;
-      // trim the trailing newline character
-      // https://stackoverflow.com/a/12524345/388827
-      "pbpaste | /usr/local/bin/titlecase | perl -pe 'chomp if eof' | pbcopy; " +
-      // (3) paste it back
-      '/usr/local/bin/cliclick kd:cmd t:v ku:cmd;',
-  ]);
-});
-
-function type(value) {
-  // wait 100ms before inserting the text to ensure that the modifier keys have been released;
-  // XXX is there a better way? https://github.com/kasper/phoenix/issues/262
-  Task.run('/usr/local/bin/cliclick', ['w:100', `t:${value}`]);
+function getArch() {
+  return new Promise((resolve, reject) =>
+    Task.run('/usr/bin/uname', ['-p'], (t) => (t.status !== 0 ? reject() : resolve(t.output.trim())))
+  );
 }
+
+getArch().then((arch) => {
+  // path to homebrew binaries is different on Intel vs. Apple Silicon
+  // https://docs.brew.sh/FAQ#why-should-i-install-homebrew-in-the-default-location
+  const homebrewPrefix = arch === 'arm' ? '/opt/homebrew' : '/usr/local';
+
+  // generate a random invoice number (ten numeric characters)
+  Key.on('i', modifiers, () => type(generateRandomString(10, '0123456789')));
+  // current date, e.g. “2020-07-26”
+  Key.on('d', modifiers, () => {
+    // give the date in current time zone:
+    // https://stackoverflow.com/a/29774197
+    const date = new Date();
+    const offset = date.getTimezoneOffset();
+    const dateString = new Date(date.getTime() - offset * 60 * 1000).toISOString().replace(/T.*$/, '');
+    type(dateString);
+  });
+  // make selected text “Title Case”
+  // TODO currently doesn’t work properly with special characters, e.g. umlaut, curly quotes, …
+  // this is obviosuly an encoding issue, but I’m not sure how to properly set the encoding here?
+  Key.on('t', modifiers, () => {
+    Task.run('/usr/bin/env', [
+      'bash',
+      '-c',
+      // (1) copy the current text selection
+      `${homebrewPrefix}/bin/cliclick w:100 kd:cmd t:c ku:cmd; ` +
+        // (2) run `titlecase` on the clipboard content;
+        // trim the trailing newline character
+        // https://stackoverflow.com/a/12524345/388827
+        `pbpaste | ${homebrewPrefix}/bin/titlecase | perl -pe 'chomp if eof' | pbcopy; ` +
+        // (3) paste it back
+        `${homebrewPrefix}/bin/cliclick kd:cmd t:v ku:cmd;`,
+    ]);
+  });
+
+  function type(value) {
+    // wait 100ms before inserting the text to ensure that the modifier keys have been released;
+    // XXX is there a better way? https://github.com/kasper/phoenix/issues/262
+    Task.run(`${homebrewPrefix}/bin/cliclick`, ['w:100', `t:${value}`]);
+  }
+});
 
 function generateRandomString(length, characters) {
   const result = [];
