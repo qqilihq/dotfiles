@@ -8,6 +8,7 @@ brew upgrade
 brew install ansible
 brew install cliclick
 brew install dnsmasq
+brew install hashicorp/tap/hashicorp-vagrant
 brew install jq
 brew install mas
 brew install maven
@@ -36,6 +37,7 @@ brew install --cask sequel-ace
 brew install --cask steam
 brew install --cask studio-3t
 brew install --cask transmit
+brew install --cask virtualbox
 brew install --cask visual-studio-code
 
 brew tap homebrew/cask-versions
