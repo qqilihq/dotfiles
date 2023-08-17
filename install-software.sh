@@ -9,6 +9,7 @@ brew install ansible
 brew install cliclick
 brew install dnsmasq
 brew install jq
+brew install mas
 brew install maven
 brew install tldr
 brew install volta
@@ -36,3 +37,6 @@ brew install --cask visual-studio-code
 
 brew tap homebrew/cask-versions
 brew install --cask 1password7
+
+mas install 1529448980 # Reeder 5
+mas install 1437501942 # RSS Button for Safari
