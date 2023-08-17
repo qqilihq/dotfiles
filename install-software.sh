@@ -17,6 +17,9 @@ brew install volta
 brew tap adoptopenjdk/openjdk
 brew install adoptopenjdk/openjdk/adoptopenjdk14
 
+brew install --cask affinity-designer 
+brew install --cask affinity-photo 
+brew install --cask affinity-publisher
 brew install --cask docker
 brew install --cask easyfind
 brew install --cask eclipse-rcp
