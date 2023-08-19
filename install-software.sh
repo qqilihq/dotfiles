@@ -40,8 +40,10 @@ brew install --cask transmit
 brew install --cask virtualbox
 brew install --cask visual-studio-code
 
+# Install old 1Password 7
 brew tap homebrew/cask-versions
 brew install --cask 1password7
+# Chrome extension: https://chrome.google.com/webstore/detail/1password-extension-deskt/aomjjhallfgjeglblehebfpbcfeobpgk
 
 mas install 1529448980 # Reeder 5
 mas install 1437501942 # RSS Button for Safari
