@@ -125,6 +125,9 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 # Disable “Do you want to enable Dictation?”
 defaults write com.apple.HIToolbox AppleDictationAutoEnable -int 0
 
+# Disable Emoji picker
+defaults write com.apple.HIToolbox AppleFnUsageType -int 0
+
 ###############################################################################
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
 ###############################################################################
