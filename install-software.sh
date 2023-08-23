@@ -45,5 +45,9 @@ brew tap homebrew/cask-versions
 brew install --cask 1password7
 # Chrome extension: https://chrome.google.com/webstore/detail/1password-extension-deskt/aomjjhallfgjeglblehebfpbcfeobpgk
 
+# Fonts
+brew tap homebrew/cask-fonts
+brew install font-arimo
+
 mas install 1529448980 # Reeder 5
 mas install 1437501942 # RSS Button for Safari
