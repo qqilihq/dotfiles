@@ -12,6 +12,7 @@ brew install hashicorp/tap/hashicorp-vagrant
 brew install jq
 brew install mas
 brew install maven
+brew install mitmproxy
 brew install tldr
 brew install volta
 
@@ -30,6 +31,7 @@ brew install --cask google-chrome
 brew install --cask grandperspective
 brew install --cask keka
 brew install --cask knime
+brew install --cask lulu
 brew install --cask mactracker
 brew install --cask phoenix
 brew install --cask rapidapi
