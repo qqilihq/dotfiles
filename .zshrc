@@ -29,6 +29,9 @@ alias invoicenumber='printf "%010d" $(jot -r 1 0 10000000000)'
 # Recursively delete `.DS_Store` files
 alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
 
+# Fix Eclipse permissions issue (https://stackoverflow.com/a/71740449/388827)
+alias fixeclipse="sudo codesign --force --deep --sign - '/Applications/Eclipse RCP.app'"
+
 # ######
 # prompt
 # ######
