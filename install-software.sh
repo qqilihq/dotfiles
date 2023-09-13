@@ -16,9 +16,6 @@ brew install mitmproxy
 brew install tldr
 brew install volta
 
-brew tap adoptopenjdk/openjdk
-brew install adoptopenjdk/openjdk/adoptopenjdk14
-
 brew install --cask affinity-designer 
 brew install --cask affinity-photo 
 brew install --cask affinity-publisher
@@ -47,6 +44,9 @@ brew install --cask wiso-steuer-2023
 brew tap homebrew/cask-versions
 brew install --cask 1password7
 # Chrome extension: https://chrome.google.com/webstore/detail/1password-extension-deskt/aomjjhallfgjeglblehebfpbcfeobpgk
+
+brew install --cask temurin11
+brew install --cask temurin17
 
 # Fonts
 brew tap homebrew/cask-fonts
