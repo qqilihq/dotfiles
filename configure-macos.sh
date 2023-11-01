@@ -578,6 +578,9 @@ defaults write com.apple.Safari ShowOverlayStatusBar -bool true
 # Open Safari with last session
 defaults write com.apple.Safari AlwaysRestoreSessionAtLaunch -bool true
 
+# Do not require password to show private tabs
+defaults write com.apple.Safari PrivateBrowsingRequiresAuthentication -bool false
+
 ###############################################################################
 # Mail                                                                        #
 ###############################################################################
