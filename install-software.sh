@@ -52,6 +52,7 @@ brew install --cask temurin17
 # Fonts
 brew tap homebrew/cask-fonts
 brew install font-arimo
+brew install font-inter
 
 mas install 1529448980 # Reeder 5
 mas install 1437501942 # RSS Button for Safari
