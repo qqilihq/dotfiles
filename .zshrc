@@ -32,6 +32,21 @@ alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
 # Fix Eclipse permissions issue (https://stackoverflow.com/a/71740449/388827)
 alias fixeclipse="sudo codesign --force --deep --sign - '/Applications/Eclipse RCP.app'"
 
+# https://www.metachris.com/2024/01/terminal-and-bash-tips-tricks/
+
+# Show / copy SSH pubkey
+alias pubkey="cat ~/.ssh/id_rsa.pub"
+alias pubkeycopy="cat ~/.ssh/id_rsa.pub | pbcopy"
+
+# Get week number
+alias week='date +%V'
+
+# Stopwatch
+alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
+
+# Show IP
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+
 # ######
 # prompt
 # ######
