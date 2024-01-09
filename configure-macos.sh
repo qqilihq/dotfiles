@@ -766,6 +766,12 @@ defaults write com.apple.TextEdit PlainTextEncodingForWrite -int 4
 # Auto-play videos when opened with QuickTime Player
 defaults write com.apple.QuickTimePlayerX MGPlayMovieOnOpen -bool true
 
+# Show week numbers in iCal overview
+defaults write com.apple.iCal "Show Week Numbers" -int 1
+
+# Enable time zone picker in iCal
+defaults write com.apple.iCal "TimeZone support enabled" -int 1
+
 ###############################################################################
 # Mac App Store                                                               #
 ###############################################################################
