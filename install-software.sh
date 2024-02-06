@@ -14,6 +14,7 @@ brew install jq
 brew install mas
 brew install maven
 brew install mitmproxy
+brew install nmap
 brew install tldr
 brew install volta
 
