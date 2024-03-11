@@ -10,6 +10,7 @@ brew install cliclick
 brew install deno
 brew install dive
 brew install dnsmasq
+brew install gnupg
 brew install hashicorp/tap/hashicorp-vagrant
 brew install hudochenkov/sshpass/sshpass
 brew install jq
