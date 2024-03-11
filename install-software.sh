@@ -7,6 +7,7 @@ brew upgrade
 
 brew install ansible
 brew install cliclick
+brew install deno
 brew install dive
 brew install dnsmasq
 brew install hashicorp/tap/hashicorp-vagrant
