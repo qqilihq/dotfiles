@@ -31,6 +31,7 @@ brew install --cask firefox
 brew install --cask fork
 brew install --cask google-chrome
 brew install --cask grandperspective
+brew install --cask imageoptim
 brew install --cask keka
 brew install --cask knime
 brew install --cask lulu
