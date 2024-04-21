@@ -581,6 +581,9 @@ defaults write com.apple.Safari AlwaysRestoreSessionAtLaunch -bool true
 # Do not require password to show private tabs
 defaults write com.apple.Safari PrivateBrowsingRequiresAuthentication -bool false
 
+# TODO - Set custom stylesheet
+# defaults write com.apple.Safari UserStyleSheetLocationURLString ...
+
 ###############################################################################
 # Mail                                                                        #
 ###############################################################################

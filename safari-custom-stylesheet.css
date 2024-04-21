@@ -1,0 +1,5 @@
+/* LineUpr Admin */
+#admin .row,
+#admin kpi-chart {
+  display: block !important;
+}
