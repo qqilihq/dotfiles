@@ -3,3 +3,8 @@
 #admin kpi-chart {
   display: block !important;
 }
+/* Hide this incredibly stupid Google overlay */
+iframe[src^='https://accounts.google.com']
+{
+  display: none;
+}
