@@ -1,6 +1,6 @@
 /* LineUpr Admin */
-#admin .row,
-#admin kpi-chart {
+#admin .dashboard .row,
+#admin .dashboard kpi-chart {
   display: block !important;
 }
 /* Hide this incredibly stupid Google overlay */
