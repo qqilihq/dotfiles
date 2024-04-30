@@ -32,6 +32,7 @@ symlink_if_not_exists "${PWD}/.phoenix.js" "${HOME}/.phoenix.js"
 symlink_if_not_exists "${PWD}/.inputrc" "${HOME}/.inputrc"
 symlink_if_not_exists "${PWD}/.zshrc" "${HOME}/.zshrc"
 symlink_if_not_exists "${PWD}/toolchains.xml" "${HOME}/.m2/toolchains.xml"
+symlink_if_not_exists "${PWD}/.huskyrc" "${HOME}/.huskyrc"
 
 # put ssh config in iCloud Drive -> `./sync/.ssh_config`
 mkdir -p "${HOME}/.ssh"
