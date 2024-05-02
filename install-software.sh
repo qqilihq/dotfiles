@@ -48,7 +48,7 @@ brew install --cask wiso-steuer-2024
 
 # Install old 1Password 7
 brew tap homebrew/cask-versions
-brew install --cask 1password7
+brew install --cask 1password@7
 # Chrome extension: https://chrome.google.com/webstore/detail/1password-extension-deskt/aomjjhallfgjeglblehebfpbcfeobpgk
 
 brew install --cask temurin11
