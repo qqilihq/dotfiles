@@ -51,8 +51,8 @@ brew tap homebrew/cask-versions
 brew install --cask 1password@7
 # Chrome extension: https://chrome.google.com/webstore/detail/1password-extension-deskt/aomjjhallfgjeglblehebfpbcfeobpgk
 
-brew install --cask temurin11
-brew install --cask temurin17
+brew install --cask temurin@11
+brew install --cask temurin@17
 
 # Fonts
 brew tap homebrew/cask-fonts
