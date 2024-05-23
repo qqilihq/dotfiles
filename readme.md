@@ -39,6 +39,8 @@ For macOS only, as that’s what I (currently, only, still) use.
 
 Install [Homebrew](https://brew.sh). Then, run the `install-software.sh` script to install most of the software I use (except e.g. Affinity, …). Then, run `install.sh` to copy the dotfiles in place.
 
+Run `configure-macos.sh` to set reasonable defaults. **Important:** Make sure to enable “Full Disk Access” for the Terminal in the System Settings before.
+
 ```
 $ ./install-software.sh
 $ ./install.sh
