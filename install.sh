@@ -33,6 +33,7 @@ symlink_if_not_exists "${PWD}/.inputrc" "${HOME}/.inputrc"
 symlink_if_not_exists "${PWD}/.zshrc" "${HOME}/.zshrc"
 symlink_if_not_exists "${PWD}/toolchains.xml" "${HOME}/.m2/toolchains.xml"
 symlink_if_not_exists "${PWD}/.huskyrc" "${HOME}/.huskyrc"
+symlink_if_not_exists "${PWD}/.gitignore_global" "${HOME}/.gitignore_global"
 
 # put ssh config in iCloud Drive -> `./sync/.ssh_config`
 mkdir -p "${HOME}/.ssh"

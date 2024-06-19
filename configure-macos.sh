@@ -953,6 +953,11 @@ defaults write com.google.Chrome.canary PMPrintingExpandedStateForPrint2 -bool t
 #defaults write com.tapbots.TweetbotMac OpenURLsDirectly -bool true
 
 ###############################################################################
+# Git                                                                         #
+###############################################################################
+git config --global core.excludesfile ~/.gitignore_global
+
+###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
 
