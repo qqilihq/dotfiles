@@ -4,21 +4,21 @@
   <toolchain>
     <type>jdk</type>
     <provides>
-      <id>JavaSE-11</id> <!-- added b/c of https://stackoverflow.com/questions/69244099/why-cant-maven-tycho-find-the-correct-jdk-in-toolchains-xml -->
-      <version>11</version>
-    </provides>
-    <configuration>
-      <jdkHome>/Library/Java/JavaVirtualMachines/temurin-11.jdk/Contents/Home</jdkHome>
-    </configuration>
-  </toolchain>
-  <toolchain>
-    <type>jdk</type>
-    <provides>
       <id>JavaSE-17</id>
       <version>17</version>
     </provides>
     <configuration>
       <jdkHome>/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home</jdkHome>
+    </configuration>
+  </toolchain>
+  <toolchain>
+    <type>jdk</type>
+    <provides>
+      <id>JavaSE-21</id>
+      <version>21</version>
+    </provides>
+    <configuration>
+      <jdkHome>/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home</jdkHome>
     </configuration>
   </toolchain>
 </toolchains>
