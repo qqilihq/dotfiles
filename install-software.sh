@@ -65,3 +65,7 @@ mas install 1437501942 # RSS Button for Safari
 mas install 409201541 # Pages
 mas install 409203825 # Numbers
 mas install 409183694 # Keynote
+
+# oasdiff
+brew tap tufin/homebrew-tufin
+brew install oasdiff
