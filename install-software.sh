@@ -18,6 +18,7 @@ brew install mas
 brew install maven
 brew install mitmproxy
 brew install nmap
+brew install telnet
 brew install tldr
 brew install volta
 
