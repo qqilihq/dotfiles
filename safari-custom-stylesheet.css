@@ -6,5 +6,5 @@
 /* Hide this incredibly stupid Google overlay */
 iframe[src^='https://accounts.google.com']
 {
-  display: none;
+  display: none !important;
 }
