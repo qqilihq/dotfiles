@@ -30,8 +30,8 @@ brew install tldr
 brew install volta
 brew install zoxide
 
-brew install --cask affinity-designer 
-brew install --cask affinity-photo 
+brew install --cask affinity-designer
+brew install --cask affinity-photo
 brew install --cask affinity-publisher
 brew install --cask docker
 brew install --cask easyfind
