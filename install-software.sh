@@ -10,19 +10,25 @@ brew install cliclick
 brew install deno
 brew install dive
 brew install dnsmasq
+brew install dust
 brew install gifify
 brew install gnupg
 brew install hashicorp/tap/hashicorp-vagrant
 brew install hudochenkov/sshpass/sshpass
+brew install itsycal
 brew install jq
+brew install maccy
 brew install mas
 brew install maven
 brew install mitmproxy
 brew install nmap
+brew install pearcleaner
+brew install pika
 brew install ripgrep
 brew install telnet
 brew install tldr
 brew install volta
+brew install zoxide
 
 brew install --cask affinity-designer 
 brew install --cask affinity-photo 
