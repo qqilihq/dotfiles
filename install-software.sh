@@ -25,6 +25,7 @@ brew install nmap
 brew install pearcleaner
 brew install pika
 brew install ripgrep
+brew install shellcheck
 brew install telnet
 brew install tldr
 brew install volta
