@@ -716,6 +716,10 @@ defaults write com.apple.Terminal ShowLineMarks -int 0
 # Don’t display the annoying prompt when quitting iTerm
 #defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 
+# Disable annoying sounds (“Basic” is the name of the profile)
+# https://gist.github.com/cseelye/5d54ca5d014619aed58cafd551149ab3
+/usr/libexec/PlistBuddy -c "Add 'Window Settings:Basic:Bell' integer 0" ~/Library/Preferences/com.apple.Terminal.plist
+
 ###############################################################################
 # Time Machine                                                                #
 ###############################################################################
