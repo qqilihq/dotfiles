@@ -14,12 +14,12 @@ symlink_if_not_exists() {
     echo "$2 is already a symlink -- nothing to do"
     return
   fi
-  if [ -f "$2" ]; then
+  if [ -e "$2" ]; then
     echo "$2 already exists -- review for changes, merge with repository, and delete."
     # TODO introduce a --force flag?
     exit 1
   fi
-  if [ ! -f "$1" ]; then
+  if [ ! -e "$1" ]; then
     echo "$1 not found."
     exit 1
   fi
@@ -34,6 +34,7 @@ symlink_if_not_exists "${PWD}/.zshrc" "${HOME}/.zshrc"
 symlink_if_not_exists "${PWD}/toolchains.xml" "${HOME}/.m2/toolchains.xml"
 symlink_if_not_exists "${PWD}/.huskyrc" "${HOME}/.huskyrc"
 symlink_if_not_exists "${PWD}/.gitignore_global" "${HOME}/.gitignore_global"
+symlink_if_not_exists "${PWD}/.config/husky" "${HOME}/.config/husky"
 
 # put ssh config in iCloud Drive -> `./sync/.ssh_config`
 mkdir -p "${HOME}/.ssh"
