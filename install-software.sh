@@ -52,6 +52,7 @@ brew install --cask sequel-ace
 brew install --cask steam
 brew install --cask studio-3t
 brew install --cask transmit
+brew install --cask tunnelblick
 brew install --cask virtualbox
 brew install --cask visual-studio-code
 brew install --cask wiso-steuer-2024
