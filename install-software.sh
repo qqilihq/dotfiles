@@ -46,6 +46,7 @@ brew install --cask keka
 brew install --cask knime
 brew install --cask lulu
 brew install --cask mactracker
+brew install --cask microsoft-teams
 brew install --cask phoenix
 brew install --cask rapidapi
 brew install --cask sequel-ace
