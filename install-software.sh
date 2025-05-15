@@ -34,6 +34,7 @@ brew install zoxide
 brew install --cask affinity-designer
 brew install --cask affinity-photo
 brew install --cask affinity-publisher
+brew install --cask chronosync
 brew install --cask docker
 brew install --cask easyfind
 brew install --cask eclipse-rcp
