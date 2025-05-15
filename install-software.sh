@@ -58,6 +58,7 @@ brew install --cask tunnelblick
 brew install --cask virtualbox
 brew install --cask visual-studio-code
 brew install --cask wiso-steuer-2024
+brew install --cask wiso-steuer-2025
 brew install --cask zed
 
 # Install old 1Password 7
