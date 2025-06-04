@@ -64,6 +64,12 @@ export CLICOLOR=1
 # export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 # export LSCOLORS=xxfxcxdxbxegedabagacad
 
+# ######
+# editor
+# ######
+
+export VISUAL="code --wait"
+
 # ################################################
 # end -- lines below have been added automatically
 # ################################################
