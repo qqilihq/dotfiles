@@ -13,6 +13,7 @@ brew install dnsmasq
 brew install dust
 brew install gifify
 brew install gnupg
+brew install hadolint
 brew install hashicorp/tap/hashicorp-vagrant
 brew install hudochenkov/sshpass/sshpass
 brew install itsycal
