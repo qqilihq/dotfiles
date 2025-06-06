@@ -32,6 +32,7 @@ brew install tldr
 brew install volta
 brew install zoxide
 
+brew install --cask acorn
 brew install --cask affinity-designer
 brew install --cask affinity-photo
 brew install --cask affinity-publisher
