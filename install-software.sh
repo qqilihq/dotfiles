@@ -60,7 +60,6 @@ brew install --cask tunnelblick
 brew install --cask virtualbox
 brew install --cask visual-studio-code
 brew install --cask visualvm
-brew install --cask wiso-steuer-2024
 brew install --cask wiso-steuer-2025
 brew install --cask zed
 
