@@ -55,6 +55,7 @@ brew install --cask rapidapi
 brew install --cask sequel-ace
 brew install --cask steam
 brew install --cask studio-3t
+brew install --cask transmission
 brew install --cask transmit
 brew install --cask tunnelblick
 brew install --cask virtualbox
