@@ -11,6 +11,7 @@ brew install deno
 brew install dive
 brew install dnsmasq
 brew install dust
+brew install exiftool
 brew install gifify
 brew install gnupg
 brew install hadolint
@@ -27,6 +28,7 @@ brew install pearcleaner
 brew install pika
 brew install ripgrep
 brew install shellcheck
+brew install sslscan
 brew install telnet
 brew install tldr
 brew install volta
