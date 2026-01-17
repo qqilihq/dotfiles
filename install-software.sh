@@ -12,6 +12,7 @@ brew install dive
 brew install dnsmasq
 brew install dust
 brew install exiftool
+brew install gabrie30/utils/ghorg
 brew install gifify
 brew install gnupg
 brew install hadolint
