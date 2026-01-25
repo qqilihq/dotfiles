@@ -55,6 +55,7 @@ brew install --cask mactracker
 brew install --cask microsoft-teams
 brew install --cask phoenix
 brew install --cask rapidapi
+brew install --cask raspberry-pi-imager
 brew install --cask sequel-ace
 brew install --cask steam
 brew install --cask studio-3t
