@@ -377,6 +377,9 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict \
 # Don’t ask when (re)moving files from iCloud
 defaults write com.apple.finder FXEnableRemoveFromICloudDriveWarning -bool false
 
+# https://daringfireball.net/linked/2026/01/26/hidden-pref-column-resizing
+defaults write com.apple.finder _FXEnableColumnAutoSizing -bool true
+
 ###############################################################################
 # Dock, Dashboard, and hot corners                                            #
 ###############################################################################
