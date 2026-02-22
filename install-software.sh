@@ -25,6 +25,7 @@ brew install mas
 brew install maven
 brew install mitmproxy
 brew install nmap
+brew install oven-sh/bun/bun
 brew install pearcleaner
 brew install pika
 brew install ripgrep
