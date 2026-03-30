@@ -40,6 +40,7 @@ brew install --cask acorn
 brew install --cask affinity-designer
 brew install --cask affinity-photo
 brew install --cask affinity-publisher
+brew install --cask arduino-ide
 brew install --cask chronosync
 brew install --cask claude-code
 brew install --cask docker
