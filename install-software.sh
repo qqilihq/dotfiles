@@ -15,6 +15,7 @@ brew install enigma
 brew install exiftool
 brew install gabrie30/utils/ghorg
 brew install gifify
+brew install glab
 brew install gnupg
 brew install hadolint
 brew install hashicorp/tap/hashicorp-vagrant
