@@ -13,6 +13,7 @@ brew install dnsmasq
 brew install dust
 brew install enigma
 brew install exiftool
+brew install ffmpeg
 brew install gabrie30/utils/ghorg
 brew install gifify
 brew install glab
