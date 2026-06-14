@@ -36,6 +36,7 @@ brew install sslscan
 brew install telnet
 brew install tldr
 brew install volta
+brew install yt-dlp
 brew install zoxide
 
 brew install --cask acorn
