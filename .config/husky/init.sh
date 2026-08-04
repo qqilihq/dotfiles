@@ -2,7 +2,10 @@
 # the only reliable place to put what a hook needs. A GUI git client or an IDE
 # reads none of the shell config, `.zshenv` included.
 
-export PATH=$PATH:~/.volta/bin
+# Prepended, matching `.zshrc`: appending means a `pnpm`/`node` sitting earlier on
+# PATH (a brew-installed one, say) shadows Volta's shim, and the project's pinned
+# version is never consulted at all.
+export PATH="$HOME/.volta/bin:$PATH"
 
 # Kept in sync with `.zshenv`, which covers non-interactive shells generally.
 # Without this, Volta ignores a project's `volta.pnpm` pin and the `pnpm` shim
