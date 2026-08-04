@@ -74,10 +74,8 @@ export VISUAL="code --wait"
 # end -- lines below have been added automatically
 # ################################################
 
-# let Volta manage pnpm as a package manager instead of a global package -
-# still gated behind this flag as of Volta 2.0.2. Without it, the `volta.pnpm`
-# pin in a project's package.json is ignored.
-export VOLTA_FEATURE_PNPM=1
+# note: VOLTA_FEATURE_PNPM lives in `.zshenv`, since non-interactive shells
+# (husky hooks) need it too and never read this file
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
 
