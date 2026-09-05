@@ -5,6 +5,7 @@
 brew update
 brew upgrade
 
+brew install age
 brew install ansible
 brew install cliclick
 brew install deno
@@ -15,6 +16,7 @@ brew install enigma
 brew install exiftool
 brew install ffmpeg
 brew install gabrie30/utils/ghorg
+brew install gh
 brew install gifify
 brew install glab
 brew install gnupg
