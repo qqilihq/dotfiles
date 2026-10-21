@@ -964,6 +964,13 @@ defaults write com.google.Chrome.canary PMPrintingExpandedStateForPrint2 -bool t
 ###############################################################################
 git config --global core.excludesfile ~/.gitignore_global
 
+# a new branch only tracks a remote branch of the same name, so that a branch made with
+# `git switch -c fix/x origin/development` can't push straight onto `development`
+git config --global branch.autoSetupMerge simple
+
+# the first `git push` of a branch without an upstream creates `origin/<branch>` and tracks it
+git config --global push.autoSetupRemote true
+
 ###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
