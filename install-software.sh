@@ -18,6 +18,7 @@ brew install ffmpeg
 brew install gabrie30/utils/ghorg
 brew install gh
 brew install gifify
+brew install git-lfs
 brew install glab
 brew install gnupg
 brew install hadolint

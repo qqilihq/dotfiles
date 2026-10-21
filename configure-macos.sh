@@ -971,6 +971,8 @@ git config --global branch.autoSetupMerge simple
 # the first `git push` of a branch without an upstream creates `origin/<branch>` and tracks it
 git config --global push.autoSetupRemote true
 
+git lfs install
+
 ###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
