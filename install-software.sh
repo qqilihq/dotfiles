@@ -29,6 +29,7 @@ brew install jq
 brew install maccy
 brew install mas
 brew install maven
+brew install mcp-publisher
 brew install mitmproxy
 brew install nmap
 brew install oven-sh/bun/bun
