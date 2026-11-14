@@ -51,6 +51,7 @@ brew install --cask affinity-publisher
 brew install --cask arduino-ide
 brew install --cask chatgpt
 brew install --cask chronosync
+brew install --cask claude
 brew install --cask claude-code
 brew install --cask docker
 brew install --cask easyfind
