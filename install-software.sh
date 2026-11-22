@@ -35,6 +35,7 @@ brew install nmap
 brew install oven-sh/bun/bun
 brew install pearcleaner
 brew install pika
+brew install pv
 brew install ripgrep
 brew install shellcheck
 brew install sslscan
